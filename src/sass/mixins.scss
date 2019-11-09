@@ -1,0 +1,18 @@
+@mixin headingStyle($size: 16px) {
+  font-family: 'DM Serif Display', serif;
+  font-weight: bold;
+  font-size: $size;
+}
+
+@mixin mQ($arg...) {
+  @if length($arg) == 1 {
+    @media screen and (min-width: nth($arg, 1)) {
+      @content;
+    }
+  }
+  @if length($arg) == 2 {
+    @media screen and (min-width: nth($arg, 1)) and (max-width: nth($arg, 2)) {
+      @content;
+    }
+  }
+}

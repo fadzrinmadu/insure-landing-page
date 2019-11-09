@@ -1,0 +1,48 @@
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  color: $veryDarkViolet;
+  text-align: center;
+}
+
+h1 {
+  @include headingStyle(46px);
+  @include mQ($large) {
+    font-size: 64px;
+  }
+}
+
+h2 {
+  @include headingStyle(28px);
+}
+
+h3 {
+  color: $darkGrayishViolet;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.container {
+  padding: 0 8%;
+}
+
+.btn {
+  color: $veryLightGray;
+  background-color: $darkViolet;
+  display: block;
+  margin: auto;
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid $veryLightGray;
+  font-weight: bold;
+}
